@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style type="text/css">
+    
+  .card1{
+      background-color: #FFFFFF;
+      padding:0;
+      margin-left: 20px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius:4px;
+      height: 500px;
+      width: 60%;
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+  }
+
+
+  .card1:hover{
+      box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+      color:black;
+  }
+
+.card2{
+      background-color: #FFFFFF;
+      padding:0;
+      margin-left: -220px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius:4px;
+      height: 500px;
+      width: 915px;
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+  }
+
+
+  .card2:hover{
+      box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+      color:black;
+  }
+
+  .card3{
+      background-color: #FFFFFF;
+      padding-top: 5px;
+      margin-left: 100px; 
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius:4px;
+      height: 500px;
+      width: 80%;
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+  }
+
+
+  .card3:hover{
+      box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+      color:black;
+  }
+
+  .navcontainer{
+      background-color: #FFFFFF;
+      padding-top:8px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius:4px;
+      height: 50px;
+      width: 100%;
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+  }
+  
+  .ques{
+      width:500px;
+
+  }
+
+  #card {
+    width:50%;
+  }
+
+  div.container{
+    width:910px;
+  }
+
+  .qaelement {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 15px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  #dummy {
+    padding-left: 20px;
+  }
+
+  .card4{
+      background-color: #FFFFFF;
+      padding:0;
+      margin-top: -160px;
+      margin-left: 20px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius:4px;
+      height: 140px;
+      width: 60%;
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+  }
+
+
+  .card4:hover{
+      box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+      color:black;
+  }
+
+  #feedback{
+    margin-left: 20px;
+    height: 60px;
+    width: 50%;
+  }
+
+  #add{
+    margin-left: 20px;
+  }
+
+  #prevBtn{
+    margin-left: 20px;
+  }
+
+  #h2{
+    padding-left: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+  }
+
+
+  </style>
+  <title>AssistGrader</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">AssistGrader</a>
+    </div>
+    
+  </div>
+</nav>
+
+<div class="col-md-4 mt-5">
+    <div class="card1 text-center pre-scrollable">
+        
+        <div class="card-body">
+          {% for z in ques_list %}
+          <div class = "navcontainer">
+            <p><b>Question : {{forloop.counter}}</b></p>
+          </div>
+          {%endfor%}
+        </div>
+        
+      </div>
+</div>
+
+<div class="col-md-4 mt-5">
+    <div class="card2">
+        <div class= "ques">
+          <p class="qaelement"><b>Questions and Answers</b></p>
+        <div id="card"></div>
+        <input type="text" id="feedback">
+        <input type='button' value='add to list' id='add' /><br><br>
+        <input type="button" value="Get Selection" onmousedown="getSelectedText()"> 
+        <button id="prevBtn">Prev</button>
+        <button id="nextBtn">Next</button>
+        
+        </div>
+      </div>
+</div>
+  
+<div class="col-md-4 mt-5">
+    <div class="card3">
+        
+        <div class="cardfeed"></div>
+          <p id="h2"><b>Feedback</b></p>
+          <form name="testform"> 
+      <textarea name="selectedtext"
+          rows="5"
+          cols="20"></textarea> 
+    </form>
+          <p id="dummy"></p>
+          <p name="dummysample"></p>
+ 
+      </div>
+</div>
+
+<div class="col-md-4 mt-5">
+    <div class="card4">
+        
+        <div id="card1"></div>
+          <h4>Progress Bar</h4>
+          <p id="dumm"></p>
+ 
+      </div>
+</div>
+
+
+<script>
+  
+var question_list = {{ques_list|safe}};
+var answer_list = {{answer_list|safe}};
+var QA = {};
+var q_number = 0;
+var f_number = 0;
+var feed = new Array(question_list.length);
+console.log(feed.length); 
+
+for(var i = 0; i < question_list.length  && i < answer_list.length; i++) {
+  QA[question_list[i]] = answer_list[i];
+}
+
+
+
+// console.log(Object.values(QA).length);
+
+var card = document.getElementById("card");
+var card1 = document.getElementById("card1");
+for (var key in QA) {
+  if(q_number < Object.keys(QA).length) {
+    var container = document.createElement("div");
+    container.setAttribute('class', 'container');
+    container.setAttribute('id', (q_number+1));
+    if(q_number != 0) {
+      container.setAttribute('style', 'display:none');
+    }
+
+
+    document.getElementById("add").onclick  = function() {
+        var node = document.createElement("Li");
+        var text = document.getElementById("feedback").value; 
+        var textnode=document.createTextNode(text);
+        node.appendChild(textnode);
+        document.getElementById("dummy").appendChild(node);
+    }
+
+    // $(function () {
+    //   $('#add').click(function () {
+    //     var node = document.createElement("Li");
+    //     var text = document.getElementById("feedback").value;
+    //     feed[q_number] = text; 
+    //     console.log(feed);
+    //     document.getElementById("dummy").appendChild(feed);
+    //   });
+    // });
+
+    var pElement = document.createElement("p");
+    var questcount = (q_number+1) + " out of " + Object.keys(QA).length;
+    var quest =  document.createTextNode(questcount);
+
+    pElement.appendChild(quest);
+    
+    var pElement1 = document.createElement("p");
+    var q_text = (q_number+1) + ". " + key;
+    var question = document.createTextNode(q_text);
+    pElement1.appendChild(question);
+    
+    var pElement2 = document.createElement("p");
+    var a_text = QA[key];
+    var answer = document.createTextNode(a_text);
+    pElement2.appendChild(answer);
+    
+    container.appendChild(pElement);
+    container.appendChild(pElement1);
+    container.appendChild(pElement2);
+
+    card.appendChild(container);
+
+    function getSelectedText() { 
+      var selectedText = ''; 
+
+      // window.getSelection 
+      if (window.getSelection) { 
+        selectedText = window.getSelection(); 
+      } 
+      // document.getSelection 
+      else if (document.getSelection) { 
+        selectedText = document.getSelection(); 
+      } 
+      // document.selection 
+      else if (document.selection) { 
+        selectedText = document.selection.createRange().text; 
+      } else return; 
+      // To write the selected text into the textarea 
+      document.testform.selectedtext.value = selectedText;
+      // document.dummysample.value = selectedText;
+      
+
+    } 
+
+    q_number += 1;
+  }
+  
+}
+
+var abcElements = document.querySelectorAll('.navcontainer');
+// Set their ids
+for (var i = 0; i < abcElements.length; i++) {
+    abcElements[i].id = (i+1);
+}
+
+// console.log(abcElements);
+
+var question_num = 0;
+$('.navcontainer').click(function(e) {
+  question_num = $(this).attr("id");
+  question_num -= 1;
+  $('.container').hide();
+    $('.container:eq(' + question_num + ')').show();
+
+});
+
+$(function () {
+  $('#nextBtn').click(function () {
+    if (($('.container').length - 1) > question_num) {
+      $('.container:eq(' + question_num + ')').hide();
+      question_num++;
+      // console.log(question_num+1);
+      $('.container:eq(' + question_num + ')').show();
+    }
+  });
+  $('#prevBtn').click(function () {
+    if (question_num != 0) {
+      $('.container:eq(' + question_num + ')').hide();
+      question_num--;
+      $('.container:eq(' + question_num + ')').show();
+    }
+  });
+});
+        
+
+    </script>
+
+</body>
+</html>
